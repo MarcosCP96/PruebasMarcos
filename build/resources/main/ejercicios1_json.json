@@ -1,0 +1,32 @@
+[
+  {
+    "tipo": "coche",
+    "puertas": 4,
+    "cv": 180,
+    "motor": "gasolina",
+    "ruedas": 4
+  },
+  {
+    "tipo": "coche",
+    "puertas": 2,
+    "cv": 120,
+    "motor": "hibrido",
+    "ruedas": 4
+  },
+  {
+    "tipo": "moto",
+    "cv": 120,
+    "motor": "hibrido",
+    "ruedas": 2
+  },
+  {
+    "tipo": "moto",
+    "cv": 240,
+    "motor": "diesel",
+    "ruedas": 2
+  },
+  {
+    "tipo": "bicicleta",
+    "ruedas": 2
+  }
+]
