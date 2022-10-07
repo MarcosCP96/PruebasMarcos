@@ -6,27 +6,6 @@ import java.io.File
 import java.lang.annotation.ElementType
 import java.lang.annotation.RetentionPolicy
 import kotlin.reflect.KClass
-
-sealed class Vehiculo(val tipo: String){
-    var velocidad: Int = 0
-}
-
-data class Coche(val puertas: Int, val cv: Int, val motor: String, val ruedas: Int): Vehiculo("coche"){
-    override fun toString(): String {
-        return "$tipo $velocidad"
-    }
-}
-data class Moto(val cv: Int, val motor: String, val ruedas: Int): Vehiculo("moto"){
-    override fun toString(): String {
-        return "$tipo $velocidad"
-    }
-}
-data class Bicicleta(val ruedas: Int): Vehiculo("bicicleta"){
-    override fun toString(): String {
-        return "$tipo $velocidad"
-    }
-}
-
 fun Vehiculo.incrementarVelocidad(){
      when (this){
         is Coche -> velocidad += 2
@@ -46,7 +25,6 @@ fun Vehiculo.reducirVelocidad(){
         }
     }
 }
-
 fun Vehiculo.returnVelocidad(): Int{
     return this.velocidad
 }
