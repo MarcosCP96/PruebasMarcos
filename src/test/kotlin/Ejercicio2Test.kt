@@ -2,7 +2,6 @@ import model.Vehiculos
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import java.lang.Exception
-import kotlin.math.exp
 
 internal class Ejercicio2Test {
 

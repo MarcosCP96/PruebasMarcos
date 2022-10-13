@@ -1,5 +1,4 @@
 import model.Vehiculos
-
 //Patron builder de fabricación de vehiculos
 sealed class Vehiculo(val tipo: Vehiculos){
     var velocidad: Int = 0
@@ -42,7 +41,7 @@ sealed class Vehiculo(val tipo: Vehiculos){
             }
         }
 
-        private fun isTipoNull(tipo: Vehiculos?) {if (tipo == null) throw Exception("Tienes que especificar el tipo de vehiculo")}
+        private fun isTipoNull(tipo: Vehiculos?) {if (tipo == null || tipo.toString() == "") throw Exception("Tienes que especificar el tipo de vehiculo")}
 
         private fun isRuedasNull(ruedas: Int?) {if (ruedas == null) throw Exception("Ruedas en el vehiculo $tipo no puede ser null")}
 
@@ -71,9 +70,12 @@ data class Bicicleta(val ruedas: Int?): Vehiculo(Vehiculos.bicicleta){
 }
 
 fun main() {
-    val newCoche = Vehiculo.Builder().setTipo(Vehiculos.coche).setPuertas(2).setCv(100).setRuedas(4).setMotor("gasolina").build()
+    val newCoche = Vehiculo.Builder().setTipo(Vehiculos.coche).setPuertas(2).setCv(100).setRuedas(4).setMotor("diesel").build()
     val newMoto = Vehiculo.Builder().setTipo(Vehiculos.moto).setCv(100).setRuedas(2).setMotor("diesel").build()
     val newBici = Vehiculo.Builder().setTipo(Vehiculos.bicicleta).setRuedas(2).build()
+    newCoche?.incrementarVelocidad()
+    newMoto?.incrementarVelocidad()
+    newBici?.incrementarVelocidad()
     println(newCoche)
     println(newMoto)
     println(newBici)

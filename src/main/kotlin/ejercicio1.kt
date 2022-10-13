@@ -1,17 +1,10 @@
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import io.github.isharipov.gson.adapters.PolymorphDeserializer
-import kotlinx.serialization.json.Json
-import java.io.File
-import java.lang.annotation.ElementType
-import java.lang.annotation.RetentionPolicy
-import kotlin.reflect.KClass
 fun Vehiculo.incrementarVelocidad(){
      when (this){
         is Coche -> velocidad += 2
         is Moto -> velocidad += 4
         is Bicicleta -> velocidad += 1
-    }
+         else -> {}
+     }
 }
 
 fun Vehiculo.reducirVelocidad(){
@@ -22,6 +15,7 @@ fun Vehiculo.reducirVelocidad(){
             is Coche -> velocidad -= 2
             is Moto -> velocidad -= 4
             is Bicicleta -> velocidad -= 1
+            else -> {}
         }
     }
 }
