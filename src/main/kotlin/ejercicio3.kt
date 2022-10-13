@@ -8,6 +8,5 @@ fun main() {
     val calc = Calculadora
     val calc2 = Calculadora
     calc.suma(1,4)
-    calc.resta(5,6)
-    println(calc.resultado)
+    calc2.resta(5,6)
 }
