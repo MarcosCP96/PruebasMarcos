@@ -19,6 +19,10 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.9.1")
     testImplementation ("org.junit.jupiter:junit-jupiter-params:5.8.1")
     implementation ("io.github.isharipov:gson-adapters:0.1")
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation ("org.mockito:mockito-core:4.8.0")
+// https://mvnrepository.com/artifact/org.mockito.kotlin/mockito-kotlin
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:4.0.0")
 
 }
 

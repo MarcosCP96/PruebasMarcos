@@ -1,7 +1,7 @@
 interface Operacion {
     fun resultado(a: Int, b: Int): Int
 }
-class Suma : Operacion {
+class Suma() : Operacion {
     override fun resultado(a: Int, b: Int): Int {
         return a + b
     }
